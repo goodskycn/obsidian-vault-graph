@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "obsidian-vault-graph"
+version = "1.0.0"
+description = "为 Obsidian 库一键建立关系图谱：注入内容标签、生成相关性双链、构建 MOC 枢纽笔记、配置图谱视图配色"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Liang Peilin" }]
+keywords = ["obsidian", "graph", "knowledge-graph", "markdown", "notes", "moc", "backlink"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: Chinese (Simplified)",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Topic :: Text Processing :: Markup :: Markdown",
+]
+dependencies = ["jieba>=0.42"]
+
+[project.urls]
+Homepage = "https://github.com/PLACEHOLDER/obsidian-vault-graph"
+
+[project.scripts]
+ovg = "obsidian_vault_graph.cli:main"
+
+[tool.setuptools]
+packages = ["obsidian_vault_graph"]
